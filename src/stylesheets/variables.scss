@@ -1,0 +1,36 @@
+/**
+* Global
+*
+* Variables that affects all aspects of the UI
+*
+*/
+
+$border-radius: 0.4rem;
+
+/**
+* Motion
+*
+* Animation and transition curves and durations
+*
+*/
+
+$motion-duration-enter: 250ms;
+$motion-duration-leave: 200ms;
+
+$motion-duration-expand: 300ms;
+$motion-duration-collapse: 250ms;
+
+$motion-duration-small: 100ms;
+$motion-duration-medium: 200ms;
+$motion-duration-large: 300ms;
+
+$motion-duration-default: 125ms;
+
+$motion-easing-default: cubic-bezier(0.4, 0, 0.2, 1);
+$motion-easing-enter: cubic-bezier(0, 0, 0.2, 1);
+$motion-easing-leave: cubic-bezier(0.4, 0, 1, 1);
+
+$motion-default: $motion-duration-default $motion-easing-default;
+$motion-small: $motion-duration-small $motion-easing-default;
+$motion-medium: $motion-duration-medium $motion-easing-default;
+$motion-large: $motion-duration-large $motion-easing-default;

@@ -1,0 +1,20 @@
+$themes: (
+  dark: (
+    background: #000,
+    surface: #1a1a1a,
+    text: #fff
+  ),
+  light: (
+    background: #fff,
+    surface: #f6f6f6,
+    text: #000
+  )
+);
+
+@each $name, $variants in $themes {
+  .app-theme-#{$name} {
+    @each $var, $value in $variants {
+      --app-theme-color-#{$var}: #{$value};
+    }
+  }
+}

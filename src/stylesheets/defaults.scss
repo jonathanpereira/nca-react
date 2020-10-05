@@ -1,0 +1,107 @@
+/**
+* Reset focus
+*
+* Suppress the focus outline on links that cannot be accessed via keyboard.
+* This prevents an unwanted focus outline from appearing around elements that
+* might still respond to pointer events.
+*/
+
+[tabindex='-1']:focus {
+  outline: none !important;
+}
+
+/**
+* Reset media
+*
+* Make media easier to work with for responsive styles.
+*/
+
+img,
+svg,
+video,
+canvas,
+iframe,
+audio {
+  display: block;
+  max-width: 100%;
+
+  vertical-align: middle;
+}
+
+img,
+svg,
+video,
+canvas {
+  height: auto;
+}
+
+audio {
+  width: 100%;
+}
+
+/**
+* Hidden content
+*
+* Cater for the 'hidden' attribute:
+* https://css-tricks.com/the-hidden-attribute-is-visibly-weak/
+*/
+
+[aria-hidden],
+[hidden] {
+  display: none !important;
+}
+
+/**
+* Links
+*
+* Sane focus style for links
+*/
+
+a:focus {
+  border-radius: 8px;
+  outline: none;
+  box-shadow: 0 0 0 4px blue;
+}
+
+/**
+* Pre styled content
+*
+* Overflow by default is bad
+*/
+
+pre {
+  white-space: pre-wrap;
+}
+
+/**
+* Table
+*
+* Prevent double cell borders and Use evenly sized numbers to line them up under each other
+*/
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  font-variant-numeric: tabular-nums;
+}
+
+/**
+* Textarea
+*
+* Let users resize multi-line text fields on their own
+*/
+
+textarea {
+  resize: vertical;
+  resize: block;
+}
+
+/**
+* HR
+*
+* Modernize 'border-style' (instead of 'inset')
+*/
+
+hr {
+  border: solid;
+}
