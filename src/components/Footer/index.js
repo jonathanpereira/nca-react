@@ -1,5 +1,15 @@
-import React from "react";
+import React from 'react'
 
-const Footer = () => <h2>Footer</h2>;
+import Style from './style.module.scss'
 
-export default Footer;
+const Footer = () => {
+  const currentData = new Date()
+
+  return (
+    <footer className="container">
+      <p>© The New Church {currentData.getFullYear()}</p>
+    </footer>
+  )
+}
+
+export default Footer
