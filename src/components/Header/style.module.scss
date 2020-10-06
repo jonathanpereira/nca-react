@@ -1,0 +1,44 @@
+@import '~stylesheets/variables.scss';
+
+.header {
+  display: flex;
+  background-color: $color-navy-green;
+  padding: 15px 20px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+}
+
+.header a {
+  text-decoration: none;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: 500;
+  color: $color-white;
+}
+
+.menu {
+  margin: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.menu li {
+  margin: 0 7px;
+}
+
+.menu a {
+  color: $color-white-alpha-50;
+}
+
+.menu a.active {
+  color: $color-white;
+}
+
+.menu a:hover {
+  color: $color-white-alpha-75;
+}
