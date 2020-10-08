@@ -1,9 +1,19 @@
-import React from 'react'
-import classes from 'clsx'
+import React, {useEffect, useState} from 'react'
+import axios from 'axios'
+
+import PopularTopics from '../../components/PopularTopics'
 
 import Style from './style.module.scss'
 
 const Home = () => {
+  const [topics, setTopics] = useState([])
+
+  useEffect(() => {
+    axios.get('http://api.ncaudio.local/api/topics/featured').then((response) => {
+      setTopics(response.data.data)
+    })
+  }, [])
+
   return (
     <main className="container">
       <div className={Style.row}>
@@ -28,7 +38,7 @@ const Home = () => {
           <h3>The mission</h3>
           <p>
             The mission of New Church Audio is to preserve{' '}
-            <a href="http://www.newchurch.org/" target="_blank">
+            <a href="http://www.newchurch.org/" target="_blank" rel="noopener noreferrer">
               The New Church
             </a>{' '}
             audio recordings, and make them available to those who desire to listen and learn more about the Lord's Word
@@ -39,25 +49,13 @@ const Home = () => {
           </p>
         </div>
         <div className={Style.column}>
-          <div className="card">
-            <div className="card__header">Popular and Featured Topics</div>
-            <div className={classes('card__body', Style.popularItemsContainer)}>
-              <a href="#">Anxiety</a>
-              <a href="#">Anxiety</a>
-              <a href="#">Anxiety</a>
-              <a href="#">Anxiety</a>
-              <a href="#">Anxiety</a>
-              <a href="#">Anxiety</a>
-              <a href="#">Anxiety</a>
-              <a href="#">Anxiety</a>
-            </div>
-          </div>
+          <PopularTopics topics={topics} />
           <h3>Recent events</h3>
           <hr />
           <div className={Style.eventCard}>
             <div className={Style.eventCard__info}>
               <h4>
-                <a href="#">Stages of Life - Part 2 - Teenage Years</a>
+                <a href="/asdf">Stages of Life - Part 2 - Teenage Years</a>
               </h4>
               <h5>Worship Service: Childrens Talk & Adult Sermon - October 04, 2020</h5>
               <p>
@@ -69,11 +67,11 @@ const Home = () => {
                 awareness of the complexity of life.
               </p>
               <p>
-                By <a href="#">Rev. Joel C Glenn</a> | <a href="#">Westville, RSA</a>
+                By <a href="/asdf">Rev. Joel C Glenn</a> | <a href="/asdf">Westville, RSA</a>
               </p>
             </div>
             <div className={Style.eventCard__btn}>
-              <a href="#">See Event</a>
+              <a href="/asdf">See Event</a>
               <p>(42m 19s)</p>
             </div>
           </div>
