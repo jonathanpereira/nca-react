@@ -1,6 +1,10 @@
 @import './variables.scss';
 @import './defaults.scss';
 @import './themes.scss';
+@import './cards.scss';
+@import './forms.scss';
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 /**
 * Structure
@@ -38,10 +42,10 @@ body {
 
   color: var(--app-theme-color-text);
 
-  padding-top: 5rem;
+  padding-top: 7rem;
 
   font-size: 1.6rem;
-  font-family: 'Avenir Next', 'Avenir-next', Avenir, sans-serif;
+  font-family: 'Roboto', sans-serif;
   line-height: 1.6em;
   letter-spacing: 0.0125em;
 
@@ -58,6 +62,26 @@ body {
   *::after {
     box-sizing: inherit;
   }
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid;
+  border-color: $color-light-gray;
+}
+
+a {
+  color: $color-light-blue;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+h3 {
+  font-size: 2.8rem;
+  font-weight: 500;
 }
 
 .app {

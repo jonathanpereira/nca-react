@@ -1,0 +1,65 @@
+@import '~stylesheets/variables.scss';
+
+.popularItemsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  a {
+    flex: 0 calc(50% - 10px);
+    border: 1px solid $color-light-gray;
+    margin: 5px;
+    padding: 10px;
+    border-radius: 0.5rem;
+    color: #000;
+  }
+  a:hover {
+    text-decoration: none;
+    background-color: $color-lighter-gray;
+  }
+}
+
+.row {
+  display: flex;
+  margin-bottom: 40px;
+}
+
+.column:last-child {
+  flex: 2;
+}
+
+.column {
+  flex: 1;
+  padding: 0 10px;
+}
+
+.eventCard {
+  display: flex;
+  border-bottom: 1px solid $color-light-gray;
+  padding: 10px 0;
+}
+
+.eventCard__info {
+  flex: 2.5;
+  border-right: 1px solid $color-light-gray;
+  padding: 10px;
+
+  h4 {
+    margin: 0;
+  }
+
+  h5 {
+    margin: 5px 0 20px 0;
+    font-weight: normal;
+    font-size: 1.5rem;
+  }
+
+  p {
+    font-size: 1.4rem;
+  }
+}
+
+.eventCard__btn {
+  flex: 1;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-around;
+}
