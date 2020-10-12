@@ -1,19 +1,10 @@
-import React, {useEffect, useState} from 'react'
-import axios from 'axios'
+import React from 'react'
 
 import PopularTopics from '../../components/PopularTopics'
 
 import Style from './style.module.scss'
 
 const Home = () => {
-  const [topics, setTopics] = useState([])
-
-  useEffect(() => {
-    axios.get('http://api.ncaudio.local/api/topics/featured').then((response) => {
-      setTopics(response.data.data)
-    })
-  }, [])
-
   return (
     <main className="container">
       <div className={Style.row}>
@@ -49,7 +40,7 @@ const Home = () => {
           </p>
         </div>
         <div className={Style.column}>
-          <PopularTopics topics={topics} />
+          <PopularTopics />
           <h3>Recent events</h3>
           <hr />
           <div className={Style.eventCard}>
