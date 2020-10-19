@@ -1,11 +1,13 @@
 import axios from 'axios'
 
+export const API_URL = process.env.REACT_APP_API_URL
+
 export const getApiUrl = (path) => {
-  return `http://api.ncaudio.local/api${path}`
+  return `${API_URL}${path}`
 }
 
-export const apiGet = (path) => {
+export const apiGet = async (path) => {
   const url = getApiUrl(path)
 
-  return axios.get(url)
+  return await axios.get(url)
 }

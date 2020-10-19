@@ -1,6 +1,7 @@
 import React from 'react'
 
 import PopularTopics from '../../components/PopularTopics'
+import RecentEvents from '../../components/RecentEvents'
 
 import Style from './style.module.scss'
 
@@ -41,31 +42,7 @@ const Home = () => {
         </div>
         <div className={Style.column}>
           <PopularTopics />
-          <h3>Recent events</h3>
-          <hr />
-          <div className={Style.eventCard}>
-            <div className={Style.eventCard__info}>
-              <h4>
-                <a href="/asdf">Stages of Life - Part 2 - Teenage Years</a>
-              </h4>
-              <h5>Worship Service: Childrens Talk & Adult Sermon - October 04, 2020</h5>
-              <p>
-                This week we continue our exploration of the stages of life as seen in the story of Moses. As a young
-                man Moses faced the challenges of putting his ideals into practice. On the one hand he could see with
-                clarity the injustice his people faced. On the other hand, he struggled to reconcile how his own people
-                treated each other, and in the end was forced to flee to a foreign land. These experiences illustrate
-                well the dichotomy of the teenage years: a growing sense of right and wrong, tempered by growing
-                awareness of the complexity of life.
-              </p>
-              <p>
-                By <a href="/asdf">Rev. Joel C Glenn</a> | <a href="/asdf">Westville, RSA</a>
-              </p>
-            </div>
-            <div className={Style.eventCard__btn}>
-              <a href="/asdf">See Event</a>
-              <p>(42m 19s)</p>
-            </div>
-          </div>
+          <RecentEvents />
         </div>
       </div>
       <hr />
